@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="{{ site.summary | truncate:140 }}">
+<meta name="keywords" content="{{ site.keywords }}">
+<meta name="author" content="Bryan Colosky">
+<title>{{ site.title }}</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ultra|Montserrat:400,700" rel="stylesheet" type="text/css">
+{% if site.github %}
+<link href="{{ site.baseurl }}/dist/css/main.min.css" rel="stylesheet">
+{% else %}
+<link href="{{ site.baseurl }}/assets/css/app.css" rel="stylesheet">
+{% endif %}
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<script src="https://use.fontawesome.com/51e60ddb16.js"></script>
+{% include favicons.html %}

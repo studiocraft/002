@@ -1,0 +1,34 @@
+{
+  "name": "studiocraft",
+  "version": "1.0.0",
+  "author": "Bryan Colosky <bryan.colosky@studiocraft.cc>",
+  "homepage": "http://studiocraft.cc/002",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "private": true,
+  "license": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-csscomb": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-favicons": "latest",
+    "gulp-jshint": "latest",
+    "gulp-rename": "latest",
+    "gulp-ruby-sass": "latest",
+    "gulp-scss-lint": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-stylestats": "latest",
+    "gulp-uglify": "latest",
+    "jshint": "latest",
+    "jshint-stylish": "latest"
+  }
+}

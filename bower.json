@@ -1,0 +1,22 @@
+{
+  "name": "studiocraft-002",
+  "version": "1.0.0",
+  "homepage": "http://studiocraft.cc/002",
+  "authors": [
+    "Bryan Colosky <bryan.colosky@studiocraft.cc>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "font-awesome": "latest",
+    "jquery": "latest",
+    "respond": "latest",
+    "animate.css": "latest",
+    "bootstrap": "latest"
+  }
+}

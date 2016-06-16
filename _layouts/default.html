@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html id="MAdTech_splash" class="locked" lang="en">
+  <head>
+  {% include head.html %}
+  </head>
+  <body id="{{ page.slug }}" class="container-fluid">
+    <div id="loaderOverlay" class="text-center">
+      <p class="animated pulse infinite">Loading ...</p>
+    </div>
+    <div class="bg">
+      <img src="{{ site.baseurl }}/assets/images/bg.jpg">
+    </div>
+    <main class="row">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

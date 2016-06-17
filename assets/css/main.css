@@ -10,10 +10,15 @@ body {
 body {
   font-family: 'proxima-nova', sans-serif;
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
 }
 
+@media (min-width: 56.8rem) {
+  body {
+    font-size: 16px;
+  }
+}
 .header {
   position: fixed;
   width: 100%;
@@ -23,7 +28,12 @@ body {
 .header .logo {
   float: left;
   margin: 0;
-  height: 65px;
+  height: 45px;
+}
+@media (min-width: 56.8rem) {
+  .header .logo {
+    height: 65px;
+  }
 }
 .header .company-name {
   float: right;
@@ -52,12 +62,37 @@ body {
 
 main {
   position: relative;
-  margin: 0 1rem;
+  margin: 0 15px;
   text-align: center;
 }
 main .wrapper {
-  width: 33%;
+  width: 100%;
   margin: 0 auto;
+}
+@media (min-width: 32rem) {
+  main .wrapper {
+    width: 66%;
+  }
+}
+@media (min-width: 56.8rem) {
+  main .wrapper {
+    width: 50%;
+  }
+}
+@media (min-width: 76.8rem) {
+  main .wrapper {
+    width: 40%;
+  }
+}
+@media (min-width: 100rem) {
+  main .wrapper {
+    width: 33%;
+  }
+}
+@media (min-width: 120rem) {
+  main .wrapper {
+    width: 25%;
+  }
 }
 main footer {
   position: absolute;
@@ -89,57 +124,130 @@ h6 {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 48px;
   margin: 24px 0 12px;
   margin: 2.4rem 0 1.2rem;
 }
 
 h2 {
-  font-size: 64px;
+  font-size: 36px;
   margin: 18px 0 12px;
   margin: 1.8rem 0 1.2rem;
 }
 
 h3 {
-  font-size: 48px;
+  font-size: 28px;
   margin: 14px 0 12px;
   margin: 1.4rem 0 1.2rem;
 }
 
 h4 {
-  font-size: 36px;
+  font-size: 20px;
   margin: 12px 0 8px;
   margin: 1.2rem 0 0.8rem;
 }
 
 h5 {
-  font-size: 28px;
+  font-size: 18px;
   margin: 12px 0 8px;
   margin: 1.2rem 0 0.8rem;
 }
 
 h6 {
-  font-size: 20px;
+  font-size: 16px;
   margin: 8px 0 4px;
   margin: 0.8rem 0 0.4rem;
 }
 
-p {
-  line-height: 1.6;
+@media (min-width: 56.8rem) {
+  h1 {
+    font-size: 72px;
+  }
+
+  h2 {
+    font-size: 64px;
+  }
+
+  h3 {
+    font-size: 48px;
+  }
+
+  h4 {
+    font-size: 36px;
+  }
+
+  h5 {
+    font-size: 28px;
+  }
+
+  h6 {
+    font-size: 20px;
+  }
+}
+a {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #00AEFF;
+}
+a:hover {
+  color: #009DE6;
+  text-decoration: none;
+}
+a:focus {
+  outline: 0;
+}
+a::before,
+a::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  bottom: -3px;
+  position: absolute;
+  background: #00AEFF;
+  transition: 0.4s ease all;
+}
+a::before {
+  left: 50%;
+}
+a::after {
+  right: 50%;
+}
+a:hover::before,
+a:hover::after {
+  width: 50%;
+  border-color: #009DE6;
+}
+a:hover::before,
+a:hover::after {
+  width: 50%;
+  border-color: #009DE6;
 }
 
+p {
+  line-height: 1.2;
+}
+
+@media (min-width: 56.8rem) {
+  p {
+    line-height: 1.6;
+  }
+}
 ::-moz-selection {
   background-color: #00AEFF;
 }
-
 ::selection {
   background-color: #00AEFF;
 }
 
-.btn {
+input[type='submit'],
+input[type='button'],
+button[type='submit'],
+button[type='button'] {
   display: inline-block;
-  width: 46%;
-  padding: 6px 24px;
+  padding: 12px 24px;
   color: #FFFFFF;
   font-size: 15px;
   line-height: 1;
@@ -148,13 +256,19 @@ p {
   background-color: #00AEFF;
   text-decoration: none;
 }
-.btn:hover,
-.btn:focus,
-.btn:active {
+input[type='submit']:hover,
+input[type='submit']:focus,
+input[type='submit']:active,
+input[type='button']:hover,
+input[type='button']:focus,
+input[type='button']:active,
+button[type='submit']:hover,
+button[type='submit']:focus,
+button[type='submit']:active,
+button[type='button']:hover,
+button[type='button']:focus,
+button[type='button']:active {
   background-color: #0099E0;
-}
-.btn:not(:first-child) {
-  margin-left: 3%;
 }
 
 form {
@@ -163,7 +277,7 @@ form {
 
 .group {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 input {
@@ -197,8 +311,8 @@ label {
 /* active state */
 input:focus ~ label,
 input:valid ~ label {
-  top: -20px;
-  font-size: 12px;
+  top: -15px;
+  font-size: 10px;
   color: #D9D9D9;
 }
 
@@ -209,15 +323,15 @@ input:valid ~ label {
   width: 100%;
 }
 
-.bar:before,
-.bar:after {
+.bar::before,
+.bar::after {
   content: '';
   height: 3px;
   width: 0;
   bottom: 1px;
   position: absolute;
   background: #00AEFF;
-  transition: 0.2s ease all;
+  transition: 0.4s ease all;
 }
 
 .bar:before {
@@ -247,8 +361,8 @@ input:focus ~ .bar:after {
 
 /* active state */
 input:focus ~ .highlight {
-  -webkit-animation: inputHighlighter 0.3s ease;
-          animation: inputHighlighter 0.3s ease;
+  -webkit-animation: inputHighlighter 0.4s ease;
+          animation: inputHighlighter 0.4s ease;
 }
 
 /* ANIMATIONS ================ */

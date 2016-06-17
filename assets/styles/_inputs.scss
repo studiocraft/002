@@ -1,64 +1,31 @@
-.btn {
-  display: inline-block;
-  width: 46%;
-  padding: 6px 24px;
-  color: $white;
-  font-size: 15px;
-  line-height: 1;
-  text-align: center;
-  border-radius: 3px;
-  background-color: $brand;
-  text-decoration: none;
+input,
+button {
+  &[type="submit"],
+  &[type="button"] {
+    display: inline-block;
+    padding: 12px 24px;
+    color: $white;
+    font-size: 15px;
+    line-height: 1;
+    text-align: center;
+    border-radius: 3px;
+    background-color: $brand;
+    text-decoration: none;
 
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: darken($brand, 6%);
-  }
-
-  &:not(:first-child){
-    margin-left: 3%;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: darken($brand, 6%);
+    }
   }
 }
-
-// input {
-//   &[type="email"],
-//   &[type="number"],
-//   &[type="search"],
-//   &[type="text"],
-//   &[type="tel"],
-//   &[type="url"],
-//   &[type="password"] {
-//     color: $white;
-//     background-color: transparentize($black, .25);
-//     margin-bottom: 15px;
-//     padding: 12px 24px;
-//     width: 100%;
-//     border: .25rem solid transparent;
-//     border-radius: 3px;
-//     box-shadow: none;
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//     appearance: none;
-//   }
-//
-//   &:focus {
-//     outline: none;
-//   }
-//
-//   &::placeholder {
-//     color: $white;
-//     font-size: 15px;
-//     text-align: center;
-//   }
-// }
 
 form {
   margin-top: 35px;
 }
 .group            {
   position:relative;
-  margin-bottom:25px;
+  margin-bottom: 20px;
 }
 
 input {
@@ -91,8 +58,8 @@ label                {
 
 /* active state */
 input:focus ~ label, input:valid ~ label        {
-  top: -20px;
-  font-size: 12px;
+  top: -15px;
+  font-size: 10px;
   color: darken($white, 15%);
 }
 
@@ -102,14 +69,14 @@ input:focus ~ label, input:valid ~ label        {
   display:block;
   width:100%;
 }
-.bar:before, .bar:after     {
+.bar::before, .bar::after     {
   content: '';
   height: 3px;
   width: 0;
   bottom: 1px;
   position: absolute;
   background: $brand;
-  transition: 0.2s ease all;
+  transition: 0.4s ease all;
 }
 .bar:before {
   left: 50%;
@@ -136,7 +103,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 
 /* active state */
 input:focus ~ .highlight {
-  animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.4s ease;
 }
 
 /* ANIMATIONS ================ */

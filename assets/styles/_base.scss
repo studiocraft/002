@@ -12,8 +12,12 @@ body {
 body {
   font-family: $body-font-family;
   color: $white;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
+}
+
+@media (#{$phablet}) {
+  body { font-size: 16px; }
 }
 
 .header {
@@ -25,7 +29,11 @@ body {
   .logo {
     float: left;
     margin: 0;
-    height: 65px;
+    height: 45px;
+  }
+
+  @media (#{$phablet}) {
+    .logo { height: 65px; }
   }
 
   .company-name {
@@ -57,12 +65,42 @@ body {
 
 main {
   position: relative;
-  margin: 0 1rem;
+  margin: 0 15px;
   text-align: center;
 
   .wrapper {
-    width: 33%;
+    width: 100%;
     margin: 0 auto;
+  }
+
+  @media (#{$mobile}) {
+    .wrapper {
+      width: 66%;
+    }
+  }
+
+  @media (#{$phablet}) {
+    .wrapper {
+      width: 50%;
+    }
+  }
+
+  @media (#{$tablet}) {
+    .wrapper {
+      width: 40%;
+    }
+  }
+
+  @media (#{$desktop}) {
+    .wrapper {
+      width: 33%;
+    }
+  }
+
+  @media (#{$desktophd}) {
+    .wrapper {
+      width: 25%;
+    }
   }
 
   footer {

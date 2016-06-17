@@ -58,7 +58,7 @@
           loopHorizontal: true,
           continuousVertical: false,
           normalScrollElements: '',
-          scrollOverflow: true,
+          scrollOverflow: false,
           scrollOverflowOptions: null,
           touchSensitivity: 15,
           normalScrollElementTouchThreshold: 5,

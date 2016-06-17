@@ -31,6 +31,66 @@
             bodyElement.addClass('animated fadeIn');
           }
         };
+
+        $('#content').fullpage({
+          //Navigation
+          menu: '#header',
+          lockAnchors: false,
+          anchors:['home', 'sign-up'],
+          navigation: false,
+          navigationPosition: 'right',
+          navigationTooltips: ['firstSlide', 'secondSlide'],
+          showActiveTooltip: false,
+          slidesNavigation: true,
+          slidesNavPosition: 'bottom',
+
+          //Scrolling
+          css3: true,
+          scrollingSpeed: 800,
+          autoScrolling: true,
+          fitToSection: true,
+          fitToSectionDelay: 1000,
+          scrollBar: false,
+          easing: 'easeInOutCubic',
+          easingcss3: 'ease',
+          loopBottom: false,
+          loopTop: false,
+          loopHorizontal: true,
+          continuousVertical: false,
+          normalScrollElements: '',
+          scrollOverflow: true,
+          scrollOverflowOptions: null,
+          touchSensitivity: 15,
+          normalScrollElementTouchThreshold: 5,
+
+          //Accessibility
+          keyboardScrolling: true,
+          animateAnchor: true,
+          recordHistory: true,
+
+          //Design
+          controlArrows: true,
+          verticalCentered: true,
+          sectionsColor : ['transparent', 'transparent'],
+          paddingTop: '0',
+          paddingBottom: '0',
+          fixedElements: '#header',
+          responsiveWidth: 0,
+          responsiveHeight: 0,
+
+          //Custom selectors
+          sectionSelector: '[data-page]',
+          slideSelector: '[data-slide]',
+
+          //events
+          onLeave: function(index, nextIndex, direction){},
+          afterLoad: function(anchorLink, index){},
+          afterRender: function(){},
+          afterResize: function(){},
+          afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+          onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

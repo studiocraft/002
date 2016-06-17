@@ -10,9 +10,12 @@
     <div class="bg">
       <img src="{{ site.baseurl }}/assets/images/bg.jpg">
     </div>
-    <main class="row">
+    <header id="header" class="header">
+      <img class="logo" src="{{ site.baseurl }}/assets/images/logo.svg">
+      <p class="company-name">Ipsos Connect</p>
+    </header>
+    <main id="content" class="row">
       {{ content }}
     </main>
-    {% include footer.html %}
   </body>
 </html>

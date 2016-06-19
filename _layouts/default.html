@@ -3,19 +3,17 @@
   <head>
   {% include head.html %}
   </head>
-  <body id="{{ page.slug }}" class="container-fluid">
+  <body id="{{ page.slug }}" class="va-debug">
     <div id="loaderOverlay" class="text-center">
       <p class="animated pulse infinite">Loading ...</p>
     </div>
     <div class="bg">
       <img src="{{ site.baseurl }}/assets/images/bg.jpg">
     </div>
-    <header id="header" class="header">
-      <img class="logo" src="{{ site.baseurl }}/assets/images/logo.svg">
-      <p class="company-name">Ipsos Connect</p>
-    </header>
-    <main id="content" class="row">
+    <main id="content">
+      {% include header.html %}
       {{ content }}
+      {% include footer.html %}
     </main>
   </body>
 </html>

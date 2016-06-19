@@ -31,7 +31,9 @@
             bodyElement.addClass('animated fadeIn');
           }
         };
-
+      },
+      finalize: function() {
+        // JavaScript to be fired on all pages, after page specific JS is fired
         $('#content').fullpage({
           //Navigation
           menu: '#header',
@@ -74,38 +76,32 @@
           sectionsColor : ['transparent', 'transparent'],
           paddingTop: '0',
           paddingBottom: '0',
-          fixedElements: '#header',
-          responsiveWidth: 0,
-          responsiveHeight: 0,
+          fixedElements: '',
+          responsiveWidth: 320,
+          responsiveHeight: 568,
 
           //Custom selectors
           sectionSelector: '[data-page]',
           slideSelector: '[data-slide]',
 
           //events
-          onLeave: function(index, nextIndex, direction){},
-          afterLoad: function(anchorLink, index){},
-          afterRender: function(){},
-          afterResize: function(){},
+          onLeave: function(index, nextIndex, direction) {
+            if(index <= 2 || direction == 'down') {
+              $('h1.title').addClass('animated slideInDown');
+              $('hr.divider').addClass('animated slideInLeft');
+            }
+          },
+          afterLoad: function(anchorLink, index){
+            if(index == 1) {
+              $('[data-anchor="'+ anchorLink +'"] h1.title').addClass('animated slideInDown');
+              $('[data-anchor="'+ anchorLink +'"] hr.divider').addClass('animated slideInLeft');
+            }
+          },
+          afterRender: function() {},
+          afterResize: function() {},
           afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
           onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
         });
-
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-
-      }
-    },
-    // Home page
-    'home': {
-      init: function() {
-        // JavaScript to be fired on the home page
-
-      },
-      finalize: function() {
-        // JavaScript to be fired on the home page, after page specific JS is fired
-
       }
     },
   };

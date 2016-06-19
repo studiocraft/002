@@ -1,18 +1,5 @@
-// Variables
-$mobile: 'min-width: 32.0rem' !default;
-$phablet: 'min-width: 56.8rem' !default;
-$tablet: 'min-width: 76.8rem' !default;
-$desktop: 'min-width: 100rem' !default;
-$desktophd: 'min-width: 120rem' !default;
-
-$brand:  #00aeff !default;
-$white:  #fff !default;
-$black:  #111 !default;
-
-$body-font-family: 'proxima-nova', sans-serif;
-$headings-font-family: 'bebas-neue', sans-serif;
-
 // Imports
+@import 'variables';
 @import 'base';
 @import 'type';
 @import 'inputs';

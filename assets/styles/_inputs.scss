@@ -5,9 +5,10 @@ button {
     display: inline-block;
     padding: 12px 24px;
     color: $white;
-    font-size: 15px;
+    font-size: 1.4em;
     line-height: 1;
     text-align: center;
+    border: none;
     border-radius: 3px;
     background-color: $brand;
     text-decoration: none;
@@ -21,45 +22,54 @@ button {
 }
 
 form {
-  margin-top: 35px;
+  margin-top: 12px;
+  margin-bottom: 18px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
-.group            {
+
+.input-group {
   position:relative;
-  margin-bottom: 20px;
+  margin-bottom: 18px
 }
 
 input {
-  color: $white;
-  background-color: transparentize($black, .25);
-  width: 100%;
-  border-radius: 3px;
-  box-shadow: none;
-  font-size: 15px;
-  padding: 12px 24px;
-  display: block;
-  border: none;
+  &[type="text"],
+  &[type="email"],
+  &[type="number"],
+  &[type="telephone"] {
+    color: $white;
+    background-color: transparentize($black, .25);
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: none;
+    padding: 12px 8px;
+    display: block;
+    border: none;
+  }
+
+  &:focus {
+    outline:none;
+  }
 }
 
-input:focus {
-  outline:none;
-}
 
 /* LABEL ======================================= */
-label                {
+label {
   color: $white;
-  font-size: 15px;
   font-weight: normal;
   position: absolute;
   pointer-events: none;
-  left: 10px;
-  top: 12px;
+  left: 8px;
+  top: 8px;
   transition: 0.2s ease all;
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label        {
-  top: -15px;
-  font-size: 10px;
+input:focus ~ label,
+input:valid ~ label {
+  top: -16px;
+  font-size: .8em;
   color: darken($white, 15%);
 }
 

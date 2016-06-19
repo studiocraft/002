@@ -2,33 +2,64 @@
 //
 // Headings, body text, lists, and other misc typographic elements.
 
-// Headings
+// Typography
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
 h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   font-family: $headings-font-family;
-  text-transform: uppercase;
-  text-rendering: optimizeLegibility;
+  font-weight: $headings-font-weight;
 }
 
-h1 { font-size: 48px; margin: 24px 0 12px; margin: 2.4rem 0 1.2rem; }
-h2 { font-size: 36px; margin: 18px 0 12px; margin: 1.8rem 0 1.2rem; }
-h3 { font-size: 28px; margin: 14px 0 12px; margin: 1.4rem 0 1.2rem; }
-h4 { font-size: 20px; margin: 12px 0 8px; margin: 1.2rem 0 0.8rem; }
-h5 { font-size: 18px; margin: 12px 0 8px; margin: 1.2rem 0 0.8rem; }
-h6 { font-size: 16px; margin: 8px 0 4px; margin: 0.8rem 0 0.4rem; }
+h1 { font-size: 3.6rem; line-height: 1.1; }
+h2 { font-size: 3.2rem; line-height: 1.2; }
+h3 { font-size: 2.8rem; line-height: 1.3; }
+h4 { font-size: 2.0rem; line-height: 1.4; }
+h5 { font-size: 1.6rem; line-height: 1.5; }
+h6 { font-size: 1.2rem; line-height: 1.6; }
 
-@media (#{$phablet}) {
-  h1 { font-size: 72px; }
-  h2 { font-size: 64px; }
-  h3 { font-size: 48px; }
-  h4 { font-size: 36px; }
-  h5 { font-size: 28px; }
-  h6 { font-size: 20px; }
+// Larger than phablet
+@media (#{$mobile}) {
+  h1 { font-size: 5.0rem; }
+  h2 { font-size: 4.2rem; }
+  h3 { font-size: 3.6rem; }
+  h4 { font-size: 3.0rem; }
+  h5 { font-size: 2.4rem; }
+  h6 { font-size: 1.5rem; }
+}
+
+// Body Text
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 1.2;
+}
+
+@media (#{$tablet}) {
+  p { line-height: 1.6; }
+}
+
+small {
+  font-size: .8em;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
 }
 
 a {
   position:relative;
   display: inline-block;
-  margin-top: 15px;
+  margin-bottom: 6px;
   font-weight: bold;
   text-decoration: none;
   color: $brand;
@@ -66,23 +97,52 @@ a {
     width: 50%;
     border-color: darken($brand, 5%);
   }
-
-  &:hover::before,
-  &:hover::after {
-    width: 50%;
-    border-color: darken($brand, 5%);
-  }
 }
 
-p {
-  line-height: 1.2;
-}
-
-@media (#{$phablet}) {
-  p { line-height: 1.6; }
-}
 .arrow {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  height: 60px;
+  width: 60px;
+  text-indent: -100%;
+  overflow: hidden;
+  border: 0;
 
+  &:hover {
+    animation: none;
+
+    &::before,
+    &::after {
+      width: 30px;
+      border-color: darken($white, 35%);
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    bottom: 0;
+    width: 30px;
+    height: 100%;
+    background-color: inherit;
+    border-bottom: 3px solid $white;
+    transition: transform .4s;
+  }
+
+  &::before {
+    left: 0;
+    transform-origin: right bottom;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    right: 0;
+    transform-origin: left bottom;
+    transform: rotate(-45deg);
+  }
 }
 
 ::selection {

@@ -28,18 +28,18 @@ body {
   clear: both; }
   .header .logo {
     display: none; }
-  @media (min-width: 550px) {
+  @media (min-width: 750px) {
     .header .logo {
       display: table-cell;
       float: left;
       margin: 0;
-      height: 60px; } }
+      height: 65px; } }
   .header .logo_mobile {
     display: table-cell;
     float: left;
     margin: 0;
-    height: 24px; }
-  @media (min-width: 550px) {
+    height: 25px; }
+  @media (min-width: 750px) {
     .header .logo_mobile {
       display: none; } }
   .header .company-name {
@@ -249,8 +249,10 @@ input[type="submit"], input[type="button"],
 button[type="submit"],
 button[type="button"] {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 12px;
+  width: 100%;
   color: #fff;
+  font-family: "proxima-nova", sans-serif;
   font-size: 1.4em;
   line-height: 1;
   text-align: center;
@@ -265,7 +267,8 @@ button[type="button"] {
   button[type="button"]:hover,
   button[type="button"]:focus,
   button[type="button"]:active {
-    background-color: #0099e0; }
+    background-color: #0099e0;
+    cursor: pointer; }
 
 form {
   margin-top: 12px;
@@ -278,13 +281,15 @@ form {
   margin-bottom: 18px; }
 
 input[type="text"], input[type="email"], input[type="number"], input[type="telephone"] {
+  display: block;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 1em;
   color: #fff;
   background-color: rgba(17, 17, 17, 0.75);
   width: 100%;
   border-radius: 3px;
   box-shadow: none;
   padding: 12px 8px;
-  display: block;
   border: none; }
 input:focus {
   outline: none; }
@@ -296,7 +301,7 @@ label {
   position: absolute;
   pointer-events: none;
   left: 8px;
-  top: 8px;
+  top: 12px;
   transition: 0.2s ease all; }
 
 /* active state */
@@ -316,7 +321,7 @@ input:valid ~ label {
   content: '';
   height: 3px;
   width: 0;
-  bottom: 1px;
+  bottom: 0;
   position: absolute;
   background: #00aeff;
   transition: 0.4s ease all; }

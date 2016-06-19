@@ -1,5 +1,11 @@
+<div id="mc_response"></div>
 <div id="mc_embed_signup">
-  <form action="//studiocraft.us13.list-manage.com/subscribe/post?u=53d65332ef68bfdcc203b272f&amp;id=b81b9166ce" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  {% if jekyll.environment == "development" or site.github %}
+  <form action="http://studiocraft.us13.list-manage.com/subscribe/post-json?u=53d65332ef68bfdcc203b272f&amp;id=b81b9166ce&amp;c=?" method="GET" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  {% elsif jekyll.environment == "production" %}
+  <form
+   action="http://ipsos.us1.list-manage.com/subscribe/post-json?u=29b1c95e23fad3b784e2e11d2&id=e58c508d18&amp;c=?" method="GET" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  {% endif %}
     <div id="mc_embed_signup_scroll">
       <div class="mc-field-group input-group">
         <input type="text" value="" name="NAME" class="required" id="mce-NAME" required>

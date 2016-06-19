@@ -102,6 +102,29 @@
           afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
           onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
         });
+
+        $("#mc-embedded-subscribe-form").submit(function(e) {
+          e.preventDefault();
+          $.ajax({
+            type: 'GET',
+            url:  $(this).attr('action'),
+            data: $(this).serialize(),
+            cache: false,
+            dataType: "jsonp",
+            jsonp: "c",
+            contentType: "application/json; charset=utf-8",
+            success: function(data){
+              if (data.result != "success") {
+                $("#mc_response").addClass('animated fadeIn').html('<p>' + data.msg + '</p>');
+              } else {
+                $("#mc_response").addClass('animated fadeIn').html('<h1>Thank You.</h1><p>' + data.msg + '</p>');
+              }
+            },
+            error: function(err){
+              $("#mc_response").addClass('animated fadeIn').html('<p>' + data.msg + '</p>');
+            }
+          });
+        });
       }
     },
   };

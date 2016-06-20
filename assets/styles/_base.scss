@@ -63,6 +63,10 @@ body {
     vertical-align: middle;
     text-align: right;
     margin: 0;
+
+    img {
+      height: 15px;
+    }
   }
 }
 
@@ -75,7 +79,7 @@ body {
   z-index: -1010;
 
   img {
-    opacity: .35;
+    opacity: .40;
     position: absolute;
     top: 0;
     left: 0;
@@ -125,11 +129,11 @@ hr.divider {
 
 hr.spacer {
   display:none;
+}
 
-  @media (#{$phablet}) {
-    .spacer {
-      display: inline-block;
-      border-color: transparent;
-    }
+@media (#{$phablet}) {
+  hr.spacer {
+    display: block;
+    border-color: transparent;
   }
 }

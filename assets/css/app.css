@@ -47,6 +47,8 @@ body {
     vertical-align: middle;
     text-align: right;
     margin: 0; }
+    .header .company-name img {
+      height: 15px; }
 
 .bg {
   height: 200%;
@@ -56,7 +58,7 @@ body {
   left: -50%;
   z-index: -1010; }
   .bg img {
-    opacity: .35;
+    opacity: .40;
     position: absolute;
     top: 0;
     left: 0;
@@ -97,11 +99,11 @@ hr.divider {
 
 hr.spacer {
   display: none; }
-  @media (min-width: 550px) {
-    hr.spacer .spacer {
-      display: inline-block;
-      border-color: transparent; } }
 
+@media (min-width: 550px) {
+  hr.spacer {
+    display: block;
+    border-color: transparent; } }
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
@@ -200,54 +202,53 @@ a {
     background: #009de6; }
 
 .arrow {
-  display: none; }
-
-@media (min-width: 550px) {
-  .arrow {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    height: 60px;
-    width: 60px;
-    text-indent: -100%;
-    overflow: hidden;
-    border: 0; }
-    .arrow:hover {
-      -webkit-animation: none;
-              animation: none; }
-      .arrow:hover::before, .arrow:hover::after {
-        width: 30px;
-        border-color: #a6a6a6; }
-    .arrow::before, .arrow::after {
-      content: '';
-      position: absolute;
-      top: -3px;
-      bottom: 0;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  height: 60px;
+  width: 60px;
+  text-indent: -100%;
+  overflow: hidden;
+  border: 0; }
+  .arrow:hover {
+    -webkit-animation: none;
+            animation: none; }
+    .arrow:hover::before, .arrow:hover::after {
       width: 30px;
-      height: 100%;
-      background-color: inherit;
-      border-bottom: 3px solid #fff;
-      transition: -webkit-transform .4s;
-      transition: transform .4s;
-      transition: transform .4s, -webkit-transform .4s; }
-    .arrow::before {
-      left: 0;
-      -webkit-transform-origin: right bottom;
-          -ms-transform-origin: right bottom;
-              transform-origin: right bottom;
-      -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-              transform: rotate(45deg); }
-    .arrow::after {
-      right: 0;
-      -webkit-transform-origin: left bottom;
-          -ms-transform-origin: left bottom;
-              transform-origin: left bottom;
-      -webkit-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-              transform: rotate(-45deg); } }
+      background-color: transparent;
+      border-color: #a6a6a6; }
+  .arrow::before, .arrow::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    bottom: 0;
+    width: 30px;
+    height: 100%;
+    background-color: inherit;
+    border-bottom: 3px solid #fff;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s; }
+  .arrow::before {
+    left: 0;
+    -webkit-transform-origin: right bottom;
+        -ms-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .arrow::after {
+    right: 0;
+    -webkit-transform-origin: left bottom;
+        -ms-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+
 ::-moz-selection {
   background-color: #00aeff; }
+
 ::selection {
   background-color: #00aeff; }
 

@@ -197,7 +197,7 @@ a {
     right: 50%; }
   a:hover::before, a:hover::after {
     width: 50%;
-    border-color: #009de6; }
+    background: #009de6; }
 
 .arrow {
   display: none; }

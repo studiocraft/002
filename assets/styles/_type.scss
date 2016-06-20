@@ -95,7 +95,7 @@ a {
   &:hover::before,
   &:hover::after {
     width: 50%;
-    border-color: darken($brand, 5%);
+    background: darken($brand, 5%);
   }
 }
 

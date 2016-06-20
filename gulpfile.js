@@ -1,8 +1,8 @@
 'use strict';
 
 var gulp = require('gulp'),
-    fs = require('fs'),
-    pkg = JSON.parse(fs.readFileSync('./package.json'));
+    // fs = require('fs'),
+    // pkg = JSON.parse(fs.readFileSync('./package.json')),
     sass = require('gulp-ruby-sass'),
     scssLint = require('gulp-scss-lint'),
     sourcemaps = require('gulp-sourcemaps'),

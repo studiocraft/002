@@ -124,5 +124,12 @@ hr.divider {
 }
 
 hr.spacer {
-  border-color: transparent;
+  display:none;
+
+  @media (#{$tablet}) {
+    .spacer {
+      display: inline-block;
+      border-color: transparent;
+    }
+  }
 }

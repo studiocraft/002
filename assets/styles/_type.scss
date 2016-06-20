@@ -100,48 +100,55 @@ a {
 }
 
 .arrow {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  height: 60px;
-  width: 60px;
-  text-indent: -100%;
-  overflow: hidden;
-  border: 0;
+  display: none;
+}
 
-  &:hover {
-    animation: none;
+
+@media (#{$phablet}) {
+  .arrow {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    height: 60px;
+    width: 60px;
+    text-indent: -100%;
+    overflow: hidden;
+    border: 0;
+
+    &:hover {
+      animation: none;
+
+      &::before,
+      &::after {
+        width: 30px;
+        border-color: darken($white, 35%);
+      }
+    }
 
     &::before,
     &::after {
+      content: '';
+      position: absolute;
+      top: -3px;
+      bottom: 0;
       width: 30px;
-      border-color: darken($white, 35%);
+      height: 100%;
+      background-color: inherit;
+      border-bottom: 3px solid $white;
+      transition: transform .4s;
     }
-  }
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    bottom: 0;
-    width: 30px;
-    height: 100%;
-    background-color: inherit;
-    border-bottom: 3px solid $white;
-    transition: transform .4s;
-  }
+    &::before {
+      left: 0;
+      transform-origin: right bottom;
+      transform: rotate(45deg);
+    }
 
-  &::before {
-    left: 0;
-    transform-origin: right bottom;
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    right: 0;
-    transform-origin: left bottom;
-    transform: rotate(-45deg);
+    &::after {
+      right: 0;
+      transform-origin: left bottom;
+      transform: rotate(-45deg);
+    }
   }
 }
 

@@ -18,6 +18,17 @@ body {
   background-color: #111;
   color: #fff; }
 
+#loaderOverlay {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  color: #111;
+  background: #fff; }
+
 .header {
   position: fixed;
   display: table;

@@ -6,4 +6,4 @@ port: 3002
 url: http://studiocraft.cc
 baseurl: /002
 
-exclude: [package.json, bower.json, Gruntfile.js, node_modules, bower_components, gulp, GitHub Repos, /**/styles, /**/scripts, .bowerrc, .sass-cache, .DS_Store, .gitignore, .editorconfig, .jshintrc, /*.yml, /*.txt, /*.md, /*.ai, /*.pdf, /*.indd, /*.idlk, /*.psd]
+exclude: [package.json, bower.json, Gruntfile.js, node_modules, bower_components, gulp, GitHub Repos, /**/styles, /**/scripts, .bowerrc, .sass-cache, .DS_Store, .gitignore, .editorconfig, .jshintrc, /*.yml, /*.txt, /*.md, /*.ai, /*.indd, /*.idlk, /*.psd]

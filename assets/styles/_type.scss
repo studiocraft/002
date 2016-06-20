@@ -23,7 +23,7 @@ h6 { font-size: 1.2rem; line-height: 1.6; }
 
 // Larger than phablet
 @media (#{$mobile}) {
-  h1 { font-size: 5.0rem; }
+  h1 { font-size: 6.4rem; }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }
   h4 { font-size: 3.0rem; }
@@ -34,14 +34,14 @@ h6 { font-size: 1.2rem; line-height: 1.6; }
 // Body Text
 p {
   margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: .8em;
   padding-top: 0;
   padding-bottom: 0;
   line-height: 1.2;
 }
 
-@media (#{$tablet}) {
-  p { line-height: 1.6; }
+@media (#{$mobile}) {
+  p { line-height: 1.4; }
 }
 
 small {

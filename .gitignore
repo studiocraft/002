@@ -10,9 +10,10 @@ stats
 
 # FAVICONS
 #
-assets/images/icons/*.png
-assets/images/icons/*.ico
-!assets/images/icons/*.src.png
+assets/images/favicons/*.png
+assets/images/favicons/*.ico
+!assets/images/favicons/*.src.png
+!assets/images/favicons/*.src.ai
 
 # BOWER
 #

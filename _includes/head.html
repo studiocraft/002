@@ -24,5 +24,9 @@
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 <!-- FontAwesome (studiocraft) -->
+{% if jekyll.environment == "development" or site.github %}
+<script src="https://use.fontawesome.com/fb3b930dc0.js"></script>
+{% elsif jekyll.environment == "production" %}
 <script src="https://use.fontawesome.com/51e60ddb16.js"></script>
+{% endif %}
 {% include favicons.html %}

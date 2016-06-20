@@ -3,17 +3,14 @@
 _originals
 stats
 
+# FAVICONS
+#
+assets/images/favicons/**
+
 # SASS
 #
 .sass-cache
 *.css.map
-
-# FAVICONS
-#
-assets/images/favicons/*.png
-assets/images/favicons/*.ico
-!assets/images/favicons/*.src.png
-!assets/images/favicons/*.src.ai
 
 # BOWER
 #
@@ -60,3 +57,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# EXCLUSIONS
+!assets/images/favicons/*.src.png
+!assets/images/favicons/*.src.ai

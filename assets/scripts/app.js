@@ -77,8 +77,8 @@
           paddingTop: '0',
           paddingBottom: '0',
           fixedElements: '',
-          responsiveWidth: 320,
-          responsiveHeight: 568,
+          responsiveWidth: 550,
+          responsiveHeight: 550,
 
           //Custom selectors
           sectionSelector: '[data-page]',

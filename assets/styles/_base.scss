@@ -126,7 +126,7 @@ hr.divider {
 hr.spacer {
   display:none;
 
-  @media (#{$tablet}) {
+  @media (#{$phablet}) {
     .spacer {
       display: inline-block;
       border-color: transparent;
